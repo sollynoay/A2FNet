@@ -1,1 +1,4 @@
-# A2FNet
+# A2FNet  
+```
+python train.py
+```
