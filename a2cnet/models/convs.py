@@ -23,25 +23,6 @@ class DoubleConv(nn.Module):
         return self.double_conv(x)
 
     
-class ReshapeConv(nn.Module):
-    """(convolution => [BN] => ReLU) * 2"""
-
-    def __init__(self, in_channels, out_channels, mid_channels=None):
-        super().__init__()
-        if not mid_channels:
-            mid_channels = out_channels
-        self.reshape_conv = nn.Sequential(
-            nn.Conv2d(in_channels, mid_channels, (3, 1), stride=(1, 1), padding=(1, 0)),
-            nn.BatchNorm2d(mid_channels),
-            nn.ReLU(inplace=True),
-            nn.Conv2d(mid_channels,out_channels,(3,3),stride=(2,1),padding=(1,1)),
-            nn.BatchNorm2d(out_channels),
-            nn.ReLU(inplace=True),
-        )
-
-    def forward(self, x):
-        return self.reshape_conv(x)
-    
 
 class Down(nn.Module):
     """double conv, downscaling with maxpool,"""
