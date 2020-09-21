@@ -10,12 +10,7 @@ class A2FNet(nn.Module):
         super(A2FNet, self).__init__()
        
     
-       # Feature extraction and reshape
-        
-        #self.fe1 = ReshapeConv(1,32)
-        #self.fe2 = ReshapeConv(32,32)
-        #self.fe3 = ReshapeConv(32,32)
-        #self.fe4 = ReshapeConv(32,32)
+  
         
         # encoder
         self.down1 = Down(16,64)
@@ -48,11 +43,7 @@ class A2FNet(nn.Module):
             self._initialize_weights()
    
     def forward(self, x):
-        # feature extraction input: batch_size * 1 * 512 * 128 (C*H*W)
-        #x = self.fe1(x)
-        #x = self.fe2(x)
-        #x = self.fe3(x)
-        #x1 = self.fe4(x)
+        # arrange the input
         x1 = pixel_unshuffle_height(x, 16)
 
 
