@@ -2,6 +2,8 @@
 ### Libraries
 ```
 pytorch 1.2.0
+torchvision 0.40
+tensorboardX
 ```  
 ### Train
 ```
