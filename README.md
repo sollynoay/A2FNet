@@ -1,5 +1,7 @@
 # A2FNet  
-
+```
+pytorch 1.2.0
+```  
 ```
 python train.py --train_path to_your_train_label --test_path to_your_validate_label
 ```
