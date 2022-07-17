@@ -1,4 +1,7 @@
 # A2FNet  
+This repository contains the source code for our paper:  
+Elevation Angle Estimation in 2D Acoustic Images Using Pseudo Front View    
+RAL and ICRA2021
 ### Libraries
 ```
 pytorch 1.2.0
@@ -14,8 +17,5 @@ The simulation dataset used in this paper can be download from the following lin
 [water tank](https://drive.google.com/file/d/1GIkl_PlVbrqaCWxCzARVR4uCt6wzuq8H/view?usp=sharing)  
 [floating object](https://drive.google.com/file/d/1zpviswi8ZgqrFrXDNCaeWle3ZYZC1ZUC/view?usp=sharing)
 # Simulator
-We also upload the simulator used to generate dataset. The simulation environment was built in Blender.
-## Dependencies
-- Blender 2.80
-- OpenEXR 1.3.2
-- Opencv 3.4.8 
+For the simulator used to generate synthetic datasets, check [here](https://github.com/sollynoay/Sonar-simulator-blender).
+
